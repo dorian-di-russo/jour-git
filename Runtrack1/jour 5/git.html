@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+       <html>
+       <meta charset="utf-8">
+       <link rel="stylesheet" type="text/css" href="git.css" media="all" />
+  <head>
+	<title>git.html</title>
+  </head>
+<header>
+	<h1>Mémo Git</h1>
+</header>
+
+<table>
+	<tr>
+		<td class="lien"> <a href="https://github.com/" target="blank"> Git Hub</a>
+			<td class="lien"><a href="https://fr.wikipedia.org/wiki/GitHub" target="blank">Git Wiki</a>
+				
+					
+				
+			</td>
+		</td>
+	</tr>
+</table>
+
+
+<table>
+
+	<tr>
+		  <th class="fond1"><a href="https://tortoisegit.org/" target="#"><img src="https://upload.wikimedia.org/wikipedia/commons/8/88/TortoiseGit_logo.svg"></a></th><!-- trouver un moyen d'ouvrir un lien a une image dans un nouvel onglet -->
+          <th class="fond1">Commandes git</th> 
+          <th class="fond1">Description succinte</th>
+	</tr>
+
+     <tr>
+            <td>.1	</td>
+            <td>	git branch newBranch	</td>	
+            <td>  Crée dans le repo local la nouvelle branche newBranch qui est un fork de la branche courante.	</td>
+     </tr>
+
+      <tr>
+      	    <td>.2	</td>
+            <td>git branch -m locBranch	</td>	
+            <td>Renomme la branche courante avec le nouveau nom locBranch.	</td>
+     </tr>
+
+      <tr>	
+      	<td>.3	</td>
+      	<td>git branch -d locBranch	</td>
+      	<td>Supprime la branche locBranch du repo local.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.4	</td>
+      	<td>git branch -u origin/remBranch	</td>
+      	<td>Ordonne à la branche courante de traquer la branche distante remBranch.	</td>
+      </tr>
+
+
+       <tr>	
+      	<td>.5	</td>
+      	<td> git branch --track locBranch origin/remBranch	</td>
+      	<td> Similaire à la commande numéro 4, à la différence qu'on explicite la branche locale qui traque : locBranch.</td>
+      </tr>
+
+       <tr>	
+      	<td>.6	</td>
+      	<td>git branch -v</td>
+      	<td>Liste les branches sur le repo local.</td>
+      </tr>
+
+       <tr>	
+      	<td>.7	</td>
+      	<td>git branch -v -a</td>
+      	<td>Liste les branches sur le repo distant.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.8	</td>
+      	<td>git branch -r | wc -l	</td>
+      	<td>Compte le nombre de branches effectivement présentes sur le repo distant.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.9	</td>
+      	<td>	git branch --merged	</td>
+      	<td>	Liste toutes les branches ayant subies un merge vers d’autres branches.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.10	</td>
+      	<td>git branch --no-merged	</td>
+      	<td>Liste toutes les branches n’ayant jamais subies un merge.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.11	</td>
+      	<td>git log	</td>
+      	<td>Affiche l’historique des commits effectués sur la branche courante avec leurs SHA1 (très verbeux).	</td>
+      </tr>
+
+       <tr>	
+      	<td>.12	</td>
+      	<td>git log --pretty=oneline	</td>
+      	<td>Affiche l’historique des commits effectués sur la branche courante, chaque commit tenant uniquement sur une ligne.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.13	</td>
+      	<td>git log --name-status HEAD^..HEAD	</td>
+      	<td>Liste tous les commits récents effectués, mais non encore pushés.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.14	</td>
+      	<td>git tag nomTag	</td>
+      	<td>Crée un tag de nom nomTag sur la branche courante.</td>
+      </tr>
+
+       <tr>	
+      	<td>.15	</td>
+      	<td>	git show nomTag	</td>
+      	<td>Donne les détails sur le tag nomTag de la branche courante.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.16	</td>
+      	<td>	git tag	</td>
+      	<td>Liste tous les tags placés sur la branche courante.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.17	</td>
+      	<td>	git stash	</td>
+      	<td>	Remet en cache (appelé Remise) les modifications sur la branche courante.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.18</td>
+      	<td>git stash list</td>
+      	<td>Liste tous les stash sur le repo local.	</td>
+      </tr>
+
+       <tr>	
+      	<td>.19	</td>
+      	<td>git stash show</td>
+      	<td>Permet de voir la liste des fichiers modifiés du dernier stash.</td>
+      </tr>
+
+      <tr>
+      	<td>.20</td>
+      	<td>git stash apply</td>
+      	<td>Applique le tout dernier stash dans la pile des stash du cache de git.</td>
+      </tr>
+
+      <tr>
+      	<td>.21</td>
+      	<td>git stash apply stash@{n}</td>
+      	<td>Applique le stash numéro n dans la pile des stash du cache de git.</td>
+      </tr>
+
+      <tr>
+      	<td>.22</td>
+      	<td>git stash pop</td>
+      	<td>Supprime le tout dernier stash dans la pile des stash du cache de git.</td>
+      </tr>
+
+      <tr>
+      	<td>.23</td>
+      	<td>git stash pop stash@{n}</td>
+      	<td>Supprime le stash numéro n dans la pile des stash du cache de git.</td>
+      </tr>
+
+      <tr>
+      	<td>.24</td>
+      	<td>git clone urlRepoDistant</td>
+      	<td>Clone le projet du repo distant vers un repo local (répertoire courant).</td>
+      </tr>
+
+      <tr>
+      	<td>.25</td>
+      	<td>git clone urlDistant pathRepoLocal</td>
+      	<td>Clone le projet du repo distant en précisant le répertoire pathRepoLocal qui constituera le repo local.</td>
+      </tr>
+
+      <tr>
+      	<td>.26</td>
+      	<td>git remote prune origin</td>
+      	<td>Supprime toutes les branches mergées et inutiles sur le repo distant.</td>
+      </tr>
+
+      <tr>
+      	<td>.27</td>
+      	<td>git fetch origin --prune</td>
+      	<td>Similaire à la commande numéro 26.</td>
+      </tr>
+
+      <tr>
+      	<td>.28</td>
+      	<td>git remote update origin --prune</td>
+      	<td>Synchronise le repo local à partir du repo distant.</td>
+      </tr>
+
+      <tr>
+      	<td>.29</td>
+      	<td>git push origin –-delete remBranch</td>
+      	<td>Supprime la branche de nom remBranch du repo distant.</td>
+      </tr>
+
+      <tr>
+      	<td>.30</td>
+      	<td>git push -u origin newBranch</td>
+      	<td>Pousse la branche locale courante sur le repo distant au nom de newBranch.</td>
+      </tr>
+
+      <tr>
+      	<td>.31</td>
+      	<td>git push --set-upstream origin newBranch</td>
+      	<td>Similaire à la commande numéro 30.</td>
+      </tr>
+
+      <tr>
+      	<td>.32</td>
+      	<td>git push</td>
+      	<td>Pousse les commits de la branche locale courante vers celle distante traquée.</td>
+      </tr>
+
+      <tr>
+      	<td>.33</td>
+      	<td>git fetch</td>
+      	<td>Actualise et vérifie si la branche locale courante est iso ou non à celle du repo distant.</td>
+      </tr>
+
+      <tr>
+      	<td>.34</td>
+      	<td>git pull</td>
+      	<td>Réalise la commande 33 et en même temps récupère en local, les éventuels commits présents sur celle distante trackée.</td>
+      </tr>
+
+      <tr>
+      	<td>.35</td>
+      	<td>git checkout locBranch</td>
+      	<td>Changement de branche : passage de la branche courante à la branche locBranch.</td>
+      </tr>
+
+      <tr>
+      	<td>.36</td>
+      	<td>git checkout -b locBranch origin/rembranch</td>
+      	<td>Créer à partir de la branche distante rembranch, la branche locale locBranch et switcher vers cette dernière.</td>
+      </tr>
+
+      <tr>
+      	<td>.37</td>
+      	<td>git checkout --track origin/rembranch</td>
+      	<td>Similaire à la commande numéro 36. Ici locBranch a le même nom que rembranch.</td>
+      </tr>
+
+      <tr>
+      	<td>.38</td>
+      	<td>git cherry-pick commit-sha1</td>
+      	<td>Commit sur la branche courante, un commit identifié par commit-sha1 effectué ailleurs.</td>
+      </tr>
+
+      <tr>
+      	<td>.39</td>
+      	<td>git merge locbranch</td>
+      	<td>Merge la branche de nom locbranch dans la branche courante (pas de perte d'historique).</td>
+      </tr>
+
+      <tr>
+      	<td>.40</td>
+      	<td>git rebase locbranch</td>
+      	<td>Rebase la branche de nom locbranch dans la branche courante (perte d'historique).</td>
+      </tr>
+
+      <tr>
+      	<td>.41</td>
+      	<td>git reset --hard HEAD^</td>
+      	<td>Force l'annulation du dernier commit avec suppression de l'historique.</td>
+      </tr>
+
+      <tr>
+      	<td>.42</td>
+      	<td>git revert HEAD^ .. HEAD</td>
+      	<td>Crée un commit inverse annulant le dernier commit pushé sur le repo distant.</td>
+      </tr>
+
+      <tr>
+      	<td>.43</td>
+      	<td>git revert commit-sha1</td>
+      	<td>Crée le commit inverse annulant un commit précisé par son commit-sha1.</td>
+      </tr>
+
+      <tr>
+      	<td>.44</td>
+      	<td>git config --global clef val</td>
+      	<td>Affecte la valeur val au champ clef de la config global git.</td>
+      </tr>
+
+      <tr>
+      	<td>.45</td>
+      	<td>git config --global --unset clef</td>
+      	<td>Supprime la clef de la configuration globale de git.</td>
+      </tr>
+
+      <tr>
+      	<td>.46</td>
+      	<td>git config --list</td>
+      	<td>Liste tous les paramètres (clef = valeur) de la config global git.</td>
+      </tr>
+
+      <tr>
+      	<td>.47</td>
+      	<td>git checkout -- pathToFile</td>
+      	<td>Annule les modifications en cours effectuées sur le fichier pathToFile.</td>
+      </tr>
+
+      <tr>
+      	<td>.48</td>
+      	<td>git rm --cahed pathToFile</td>
+      	<td>Deplace le fichier pathToFile de la zone d'index vers le working set.</td>
+      </tr>
+
+      <tr>
+      	<td>.49</td>
+      	<td>git diff pathToFile</td>
+      	<td>Compare les modification en cours du fichier pathToFile par rapport à sa version sur le repo local.</td>
+      </tr>
+
+      <tr>
+      	<td>.50</td>
+      	<td>git add pathToFile</td>
+      	<td>Ajoute le fichier modifié pathToFile dans la zone d'index pour qu'il soit prêt à être commité.</td>
+      </tr>
+
+      <tr>
+      	<td>.51</td>
+      	<td>git commit -m "commentaire"</td>
+      	<td>Commit dans le repo local tous les fichiers présents dans la zone d'index en ajoutant un commentaire propre obligatoire.</td>
+      </tr>
+
+      <tr>
+      	<td>.52</td>
+      	<td>git init</td>
+      	<td>Marque le répertoire courant comme étant un repo local Git. Concrètement crée le dossier .git dans ce répertoire.</td>
+      </tr>
+
+      <tr>
+      	<td>.53</td>
+      	<td>git branch --merged | xargs git branch -d</td>
+      	<td>Supprime sur le repo local toutes les branches qui ont été mergée dans une autre branche.</td>
+      </tr>
+
+      <tr>
+      	<td>.54</td>
+      	<td>git remote add origin pathToRemoteProject.git</td>
+      	<td>Indique à un repo git local vierge, quel est le repo distant dont il en est l'image.</td>
+      </tr>
+
+      <tr>
+      	<td>.55</td>
+      	<td>git remote set-url origin pathToRemoteProject.git</td>
+      	<td>Change sur un repo git local non vierge, l'url du repo distant dont il en est l'image.</td>
+      </tr>
+
+
+
+
+
+
+
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</table>	
+</body>
+</html>

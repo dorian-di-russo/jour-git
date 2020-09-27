@@ -1,0 +1,50 @@
+td, th 
+
+{
+
+   text-align: center;
+  border: 1px solid black; 
+  width: 50%;
+  background-color: #7B68EE;
+  padding: 5px;
+}
+
+
+table
+
+{
+    
+     width: 50%;
+	border-collapse: collapse;
+}
+
+
+h1
+
+{
+	
+	background-color: #7100ff;
+	text-align: center;
+}
+
+html 
+
+{
+	background-color: grey;
+}
+
+.fond1
+
+{
+	background-color: #2F4F4F ;
+}
+
+
+
+
+.lien
+
+{
+
+	
+}
